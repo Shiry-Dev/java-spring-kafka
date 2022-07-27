@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/mensagem")
-public class MessagemResource {
+public class MensagemResource {
 
     @Autowired
     MensagemService mensagemService;
@@ -18,8 +18,6 @@ public class MessagemResource {
     @PostMapping
     public ResponseEntity<String> enviarMensagem(@RequestBody String mensagem){
         mensagemService.sendMessage(mensagem);
-        return ResponseEntity.ok().body("Mensagem enviada com sucesso:" + mensagem);
+        return ResponseEntity.ok().body("Mensagem enviada com sucesso: " + mensagem);
     }
-
-
 }
