@@ -1,9 +1,9 @@
 package br.com.spring.kafka.producer.service;
 
-import lombok.Value;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 public class MensagemService {
     private static final Logger logger = LoggerFactory.getLogger(MensagemService.class);
 
+    @Value("${topic.spring_kafka}")
     private static String topicSpringKafka;
 
     @Autowired
