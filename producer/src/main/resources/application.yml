@@ -7,3 +7,5 @@ spring:
 
 topic:
   spring-kafka: topic_spring_kafka
+
+

@@ -9,6 +9,7 @@ spring:
 
 topic:
   spring-kafka: topic_spring_kafka
+  resultado: resultado
 
 server:
   port : 8081
