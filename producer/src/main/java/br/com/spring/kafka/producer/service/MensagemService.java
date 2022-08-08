@@ -18,7 +18,7 @@ public class MensagemService {
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
 
-    public void sendMessage(String message) {
+    public void sendMessage(String message) {//envia a mensagem para o kafka
         logger.info("Mensagem -> {}", message);
         this.kafkaTemplate.send(topicSpringKafka, message);
     }
